@@ -6,9 +6,11 @@ import react from '@astrojs/react';
 
 import vercel from "@astrojs/vercel";
 
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://portfolio.github.io',
+  site: 'https://crazykidboi.github.io',
+  base: '/portfolio',
 
    output: 'server',
   vite: {
