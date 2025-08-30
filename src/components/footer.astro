@@ -1,0 +1,33 @@
+---
+import clsx from "clsx";
+import ExternalLink from "./external-link.astro";
+
+const pathname = Astro.url.pathname;
+---
+
+<footer class="py-4 px-4 sm:px-12 w-full fixed bottom-0 flex items-center gap-4 sm:gap-8 bg-zinc-900">
+    <div class="flex gap-1">
+        <ExternalLink href="/" openNewTab={false}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6 text-zinc-500 group-hover:text-zinc-100">
+                <title>Home</title>
+                <path fill="currentColor" fill-rule="evenodd" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" clip-rule="evenodd"/>
+            </svg>
+        </ExternalLink>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <p class="text-zinc-600">/</p>
+    
+        <ExternalLink href="/projects" openNewTab={false}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class={clsx("w-6 h-6", pathname === "/projects" ? "text-zinc-100" : "text-zinc-500 group-hover:text-zinc-100")}>
+                <title>Projects</title>
+                <path fill="currentColor" fill-rule="evenodd" d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" clip-rule="evenodd"/>
+                <path fill="currentColor" d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" opacity=".4"/><path fill="currentColor" d="M6.31 4.723c-1.39 0-2.53.84-2.91 1.953l-.024.07a8 8 0 0 1 1.232-.253c1.08-.138 2.446-.138 4.032-.138h6.892c1.586 0 2.952 0 4.032.138c.42.054.834.133 1.232.253l-.023-.07c-.38-1.114-1.52-1.953-2.911-1.953z" opacity=".7"/>
+            </svg>
+        </ExternalLink>
+    </div>
+
+    <ExternalLink href="/blog" openNewTab={false}>Blog</ExternalLink>
+    <ExternalLink href="/about" openNewTab={false}>About</ExternalLink>
+    <ExternalLink href="/contact" openNewTab={false}>Contact</ExternalLink>
+</footer>
+
+<!-- place to get icons https://iconsvg.xyz -->
