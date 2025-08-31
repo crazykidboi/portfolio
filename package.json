@@ -1,7 +1,7 @@
 {
-  "name": "nikola-tesla",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "portfolio",
+  "version": "1.0.0",
+  
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -26,5 +26,6 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16"
-  }
+  },
+  "packageManager": "pnpm@10.15.0"
 }
