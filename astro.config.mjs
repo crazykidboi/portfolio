@@ -6,6 +6,8 @@ import react from '@astrojs/react';
 
 import vercel from "@astrojs/vercel";
 
+import vercelServerless from '@astrojs/vercel/serverless';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://crazykidboi.github.io',
@@ -27,5 +29,5 @@ export default defineConfig({
     }]
   },
 
-  adapter: vercel()
+  adapter: vercelServerless(),
 });
