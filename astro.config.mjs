@@ -12,6 +12,11 @@ import vercelServerless from '@astrojs/vercel/serverless';
 export default defineConfig({
   site: 'https://crazykidboi.github.io',
   base: '/portfolio',
+  
+  webAnalytics: {
+      enabled: true,
+    },
+    maxDuration: 8,
 
    output: 'server',
   vite: {
