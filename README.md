@@ -1,9 +1,10 @@
-IM NOT THE OG CREATER OF THIS TEMPLATE
+Nikola Tesla Portfolio
 ======================
 
 Nikola Tesla Portfolio is an Astro template built with of course Astro 5.7,
 React 19 and TailwindCSS 4
 
+![Nikola Tesla Astro Portfolio](/public/social-image.jpg)
 
 Getting Started
 ---------------

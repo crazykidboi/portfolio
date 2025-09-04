@@ -1,13 +1,28 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import react from "@astrojs/react";
+// @ts-check
+import { defineConfig, fontProviders } from 'astro/config';
 
-// REMOVED the import for the missing "remark-reading-time.mjs" file.
+import tailwindcss from '@tailwindcss/vite';
+import react from '@astrojs/react';
+
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://lyonsiv.mov",
-  integrations: [tailwind(), react()],
-  // REMOVED the markdown section that was trying to use the missing plugin.
-  output: "static",
+   output: 'server',
+  vite: {
+    plugins: [tailwindcss()]
+  },
+
+  integrations: [react()],
+
+  experimental: {
+    fonts: [{
+      provider: fontProviders.google(),
+      name: "Geist",
+      cssVariable: "--font-geist",
+      fallbacks: ["Inter", "sans-serif"],
+    }]
+  },
+
+  adapter: vercel()
 });
