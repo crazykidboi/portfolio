@@ -1,20 +1,15 @@
-// @ts-check
 import { defineConfig, fontProviders } from 'astro/config';
-
-import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
+import tailwindcss from '@tailwindcss/vite';
+import node from '@astrojs/node';
 
-import vercel from "@astrojs/vercel";
-
-// https://astro.build/config
 export default defineConfig({
-   output: 'server',
-  vite: {
-    plugins: [tailwindcss()]
-  },
-
+  site: 'https://lyonsiv.mov',
+  base: '/',
+  output: 'server',       // server output
+  adapter: node({ mode: 'standalone' }), // Node server
   integrations: [react()],
-
+  vite: { plugins: [tailwindcss()] },
   experimental: {
     fonts: [{
       provider: fontProviders.google(),
@@ -22,7 +17,5 @@ export default defineConfig({
       cssVariable: "--font-geist",
       fallbacks: ["Inter", "sans-serif"],
     }]
-  },
-
-  adapter: vercel()
+  }
 });
