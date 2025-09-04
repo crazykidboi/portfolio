@@ -1,19 +1,21 @@
-import { defineConfig, fontProviders } from 'astro/config';
-import react from '@astrojs/react';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from "astro/config";
+import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react";
+import { remarkReadingTime } from "./src/utils/remark-reading-time.mjs";
 
+// https://astro.build/config
 export default defineConfig({
-  site: 'https://lyonsiv.mov',
-  base: '/',
-  output: 'static',          // MUST be 'static'
-  integrations: [react()],
-  vite: { plugins: [tailwindcss()] },
-  experimental: {
-    fonts: [{
-      provider: fontProviders.google(),
-      name: "Geist",
-      cssVariable: "--font-geist",
-      fallbacks: ["Inter", "sans-serif"],
-    }]
-  }
+  site: "https://lyonsiv.mov",
+  integrations: [tailwind(), react()],
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+  },
+  // VERCEL
+  // The error is caused by the line below.
+  // 'server' mode is for on-demand rendering and requires an adapter.
+  // To build a static site, you need to change this.
+  // CHANGE THIS LINE:
+  // output: "server",
+  // TO THIS LINE:
+  output: "static",
 });
