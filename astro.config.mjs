@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://lyonsiv.mov',
   base: '/',
-  output: 'static',       // MUST be 'static'
+  output: 'static',          // MUST be 'static'
   integrations: [react()],
   vite: { plugins: [tailwindcss()] },
   experimental: {
