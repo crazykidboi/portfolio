@@ -4,21 +4,13 @@ import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 
-import vercel from "@astrojs/vercel";
+// import vercel from "@astrojs/vercel";
 
-import vercelServerless from '@astrojs/vercel/serverless';
-
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://crazykidboi.github.io',
-  base: '/portfolio',
-  
-  webAnalytics: {
-      enabled: true,
-    },
-    maxDuration: 8,
+  site: 'https://lyonsiv.mov',   // ✅ update to your real domain
+  base: '/',                     // ✅ use root, not /portfolio
+  output: 'static',              // ✅ important: generates index.html + assets
 
-   output: 'server',
   vite: {
     plugins: [tailwindcss()]
   },
@@ -32,7 +24,5 @@ export default defineConfig({
       cssVariable: "--font-geist",
       fallbacks: ["Inter", "sans-serif"],
     }]
-  },
-
-  adapter: vercelServerless(),
+  }
 });
