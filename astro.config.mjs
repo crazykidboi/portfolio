@@ -1,28 +1,11 @@
-// @ts-check
-import { defineConfig, fontProviders } from 'astro/config';
-
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-
-// import vercel from "@astrojs/vercel";
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://lyonsiv.mov',   // ✅ update to your real domain
-  base: '/',                     // ✅ use root, not /portfolio
-  output: 'static',              // ✅ important: generates index.html + assets
-
-  vite: {
-    plugins: [tailwindcss()]
-  },
-
+  site: 'https://lyonsiv.mov',
+  base: '/',
+  output: 'static',     // MUST be static
   integrations: [react()],
-
-  experimental: {
-    fonts: [{
-      provider: fontProviders.google(),
-      name: "Geist",
-      cssVariable: "--font-geist",
-      fallbacks: ["Inter", "sans-serif"],
-    }]
-  }
+  vite: { plugins: [tailwindcss()] },
 });
