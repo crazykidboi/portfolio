@@ -67,7 +67,7 @@
         },
         "author": {
           "type": "string",
-          "default": "Retro Rocket Team"
+          "default": "Liam Lyons IV"
         },
         "relatedArticles": {
           "type": "array",

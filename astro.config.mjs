@@ -15,6 +15,9 @@ export default defineConfig({
      allowedHosts: ['lyonsiv.mov'] // Add this line to allow the specific host
    }
  },
+ devToolbar: {
+  enabled: false,
+},
  integrations: [react()],
  experimental: {
    fonts: [{

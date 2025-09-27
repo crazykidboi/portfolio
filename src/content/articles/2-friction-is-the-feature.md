@@ -4,7 +4,7 @@ title: friction is the feature
 snippet: in a world where everything is free, nothing is valued.
 slug: friction-is-the-feature
 author: signull
-category: AI
+category: Photography
 readingDuration: 1
 pubDate: 2025 4 12
 coverAlt: friction is the feature cover

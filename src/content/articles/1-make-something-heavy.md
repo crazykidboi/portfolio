@@ -1,15 +1,17 @@
 ---
+
 isDraft: false
 title: Make Something Heavy
 snippet: We're creating more than ever, but it weighs nothing.
 slug: make-something-heavy
 author: Anu Atluru 
-category: Craft
+category: Photography
 readingDuration: 1
 pubDate: 2025 3 9
 coverAlt: Women Holding Things - Maira Kalman, 2022.
 originalLink: https://www.workingtheorys.com/p/make-something-heavy
-cover: https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Facc54571-c711-44a0-a529-a501d8565466_680x878.jpeg
+cover: https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faf9f6d5e-b688-4c8b-b243-3f55362cccc5_1024x1024.png
+
 ---
 
 # Make Something Heavy.

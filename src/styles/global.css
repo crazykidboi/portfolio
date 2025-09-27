@@ -3,4 +3,31 @@
 
 @theme inline {
 	--font-sans: var(--font-geist);
+	--font-serif: 'Georgia', serif;
+
+	--color-*: initial;
+	--color-swirl1: oklch(0.65 0.1991 143.6);
+	--color-swirl2: oklch(0.63 0.1391 272.03);
+	--color-swirl3: oklch(0.55 0.1149 299.44);
+
+	
+  	--color-white: #fff;
+  	--color-backgroundcolor1: #111111;
+	--color-backgroundcolor2: #222222;
+
+	--color-zinc-100: #d2d2d2; 
+	--color-zinc-200: #d2d2d2;
+	--color-zinc-300: #d2d2d2;
+	--color-zinc-400: #d2d2d2;
+	--color-zinc-500: #d2d2d2;
+	--color-zinc-600: #b2b2b2;
+	--color-zinc-700: #5c5c5c;
+	--color-zinc-800: #353535;
+	--color-zinc-900: #222222;
+
+
+  	--color-text1: #eb533d;
+  	--color-tahiti: #3ab7bf;
+  	--color-bermuda: #78dcca;
+	
 }
