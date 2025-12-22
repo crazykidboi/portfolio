@@ -1,10 +1,11 @@
 import { glob } from "astro/loaders";
 import { z, reference, defineCollection } from "astro:content";
+import { Image } from 'astro:assets';
+import { iframe } from "motion/react-client";
 
 const articles = defineCollection({
     loader: glob({ pattern: ["**/*.md", "**/*.mdx"], base: "./src/content/articles" }),
     schema: ({ image }) => z.object({
-        cover: image(),
         coverAlt: z.string(),
         title: z.string(),
         slug: z.string(),
@@ -15,8 +16,9 @@ const articles = defineCollection({
         originalLink: z.string().url(),
         isDraft: z.boolean().default(false),
         updatedDate: z.coerce.date().optional(),
-        author: z.string().default('Liam Lyons IV'),
+        mainRole: z.string().default('Designer'),
         relatedArticles: z.array(reference('articles')).optional(),
+        cover: z.string(),
     }),
 });
 

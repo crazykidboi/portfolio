@@ -1,10 +1,9 @@
-Nikola Tesla Portfolio
+LyonsIV Portfolio
 ======================
 
-Nikola Tesla Portfolio is an Astro template built with of course Astro 5.7,
-React 19 and TailwindCSS 4
+Origanlly designed by djm-im (Djordje Mijatović) nikola-geek-tesla
+Adjusted for personal use by Liam Lyons IV
 
-![Nikola Tesla Astro Portfolio](/public/social-image.jpg)
 
 Getting Started
 ---------------

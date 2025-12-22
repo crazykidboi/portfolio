@@ -41,7 +41,7 @@ const relatedArticles = allArticles.filter(
         </Prose>
 
         <p class="my-4 text-sm italic text-zinc-300">
-            This is an excerpt from {`${article.data.author}'s`}
+            This is an excerpt from {`${article.data.mainRole}'s`}
             <a href={article.data.originalLink} target="_blank" class="underline underline-offset-4 decoration-zinc-100 hover:decoration-white hover:text-white">
                 {article.data.title}
             </a>
@@ -64,7 +64,7 @@ const relatedArticles = allArticles.filter(
                                     </h3>
                                     <p class="mt-0.5 text-sm text-zinc-400">
                                         {formatDate((article.data.pubDate))} 
-                                        &middot; {article.data.author}
+                                        &middot; {article.data.mainRole}
                                     </p>
                                 </a>
                             </li>

@@ -56,7 +56,7 @@ const articles = articlesResult?.data?.articles || [];
             }
         </ul>
 
-        <ul class="mt-4 space-y-6">
+        <ul class="grid grid-flow-col grid-rows-2 gap-5 mt-2 space-y-2">
             {
                 articles.map((article) => (
                     <li>
@@ -70,7 +70,7 @@ const articles = articlesResult?.data?.articles || [];
                         
                             <p class="text-sm text-zinc-500">
                                 {formatDate(article.data.pubDate)} &middot;{" "}
-                                {article.data.author}
+                                {article.data.mainRole}
                             </p>
                             <img src={article.data.cover} class="w-full h-auto object-cover" style="width: 300px; height: 200px; overflow: hidden;"/>
                         </a>

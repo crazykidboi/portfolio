@@ -32,12 +32,14 @@ import AvailableForWork from "../components/available.astro";
 					<AvailableForWork className="py-4" />
 					<div class="mb-2 sm:mb-4 flex items-center justify-between">
 						<div class="flex items-center gap-4">
-							<Link href="/contact">Contact</Link>
-							<Link href="/projects" variant="secondary">View recent work</Link>
+							<Link href="/work">Collection</Link>
+							<Link href="/work?category=lighting%20design" variant="secondary">Lighting Design</Link>
+							<Link href="/work" variant="secondary">Video</Link>
+							<Link href="/work" variant="secondary">Photo</Link>
+							<Link href="/work" variant="secondary">Graphic Design</Link>
 						</div>
 
 						<Navigation client:load>
-							<Link href="/work" variant="secondary">Work</Link>
 							<Link href="/about" variant="secondary">About</Link>
 							<Link href="/contact" variant="secondary">Contact</Link>
 						</Navigation>

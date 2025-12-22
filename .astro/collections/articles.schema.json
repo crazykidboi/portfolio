@@ -4,9 +4,6 @@
     "articles": {
       "type": "object",
       "properties": {
-        "cover": {
-          "type": "string"
-        },
         "coverAlt": {
           "type": "string"
         },
@@ -65,9 +62,9 @@
             }
           ]
         },
-        "author": {
+        "mainRole": {
           "type": "string",
-          "default": "Liam Lyons IV"
+          "default": "Designer"
         },
         "relatedArticles": {
           "type": "array",
@@ -111,12 +108,14 @@
             ]
           }
         },
+        "cover": {
+          "type": "string"
+        },
         "$schema": {
           "type": "string"
         }
       },
       "required": [
-        "cover",
         "coverAlt",
         "title",
         "slug",
@@ -124,7 +123,8 @@
         "category",
         "pubDate",
         "readingDuration",
-        "originalLink"
+        "originalLink",
+        "cover"
       ],
       "additionalProperties": false
     }
