@@ -1,37 +1,71 @@
 ---
 import H1 from "../components/h1.astro";
 import InfoLayout from "../layouts/InfoLayout.astro";
+import { Image } from "astro:assets";
+import headshot from "../assets/liamHeadshot.jpg";
 ---
 
 <InfoLayout>
-     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-between gap-32">
+     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-between gap-15">
           <div class="space-y-4 sm:space-y-12">
-               <H1> Get to Liam </H1>
+               <H1> About Liam Lyons IV </H1>
 
                <div>
-                    <img class="h-100 p-0 justify-center " src="/src/assets/ac-generator.jpg"/> 
+                    <Image src={headshot} alt="" width={800} quality={"max"}/> 
                 </div>
 
-               <p class="text-xl xl:text-2xl text-zinc-500 text-balance">
+               <p class="text-xl xl:text-xl text-zinc-500 text-balance">
                     
-                    Nikola Tesla (1856-1943) was a Serbian-American inventor, engineer, and futurist
-                    best known for his pioneering work in electricity and electromagnetism.
-                    His innovations laid the foundation for modern alternating current
-                    (AC) power systems and many technologies still in use today.
+                    Liam Lyons IV (also known as William Lyons IV) creates technical art for theaters, concerts, and tours.
+                    Having worked with IPS in Nashville and local tours in Pittsburgh, and being Known for a tireless work ethic, 
+                    he thrives on pushing creative limits while staying on schedule and under budget. 
+                    Ready to travel—or relocate—so you can obtain flawless, immersive lighting that elevates every show.
+                    
+               </p>
+
+               <p class="text-xl xl:text-xl text-zinc-500 text-balance">
+                    
+                    He currently works at a variety of theaters in the Pittsburgh area, he loves to travel and see shows in the city when he can. 
+                    In addition to lighting design, he has a BA in Film 
+                    at Chatham University, so you can sometimes find him making short films, documentaries, music videos, 
+                    and do photography here and there. On his off time he loves learning about new and
+                    old technology. Coding is also a side project from time to time, including building this exact website. 
+                    He loves to drum when he can, he is in two bands at the moment and often plays 
+                    live and for studio recordings for friends. All around is always excited to try something new.
+                    
                </p>
           </div>
 
           <div class="space-y-2 text-base sm:text-lg">
-               <h2 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">Achievements</h2>
+               <h2 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">Skills</h2>
 
                <ul class="px-4 text-zinc-400 list-disc list-outside">
-                    <li>Alternating Current (AC) System</li>
-                    <li>Tesla Coil</li>
-                    <li>Induction Motor</li>
-                    <li>Wireless Transmission</li>
-                    <li>Radio and Remote Control</li>
-                    <li>Hydroelectric Power at Niagara Falls</li>
-                    <li>X-Ray Imaging</li>
+                    <li>MA3</li>
+                    <li>ETC Ion XE, ETC Element 2, ETC Puck</li>
+                    <li>MagicQ MQ50</li>
+                    <li>Qlab</li>
+                    <li>QLC+</li>
+                    <li>MEWP Certified</li>
+                    <li>Concert and Theatre lighting focus and hang</li>
+                    
+               </ul>
+          </div>
+
+          <div class="space-y-2 text-base sm:text-lg">
+               <h2 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">Companies worked with</h2>
+
+               <ul class="px-4 text-zinc-400 list-disc list-outside">
+                    <li>Integrated Production Solutions (IPS)</li>
+                    <li>Flyspace Productions</li>
+                    <li>Kellystrayhorn Theater</li>
+                    <li>New Hazlett Theater</li>
+                    <li>Pearl Arts</li>
+                    <li>Art Yard Theater</li>
+                    <li>Shadyside Academy</li>
+                    <li>University of Pittsburgh</li>
+                    <li>Chatham University</li>
+                    <li>Fireside Events LLC</li>
+                    
                </ul>
           </div>
      </div>

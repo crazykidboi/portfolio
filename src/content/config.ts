@@ -1,11 +1,10 @@
 import { glob } from "astro/loaders";
 import { z, reference, defineCollection } from "astro:content";
-import { Image } from 'astro:assets';
-import { iframe } from "motion/react-client";
+// import { iframe } from "motion/react-client";
 
 const articles = defineCollection({
     loader: glob({ pattern: ["**/*.md", "**/*.mdx"], base: "./src/content/articles" }),
-    schema: ({ image }) => z.object({
+    schema: ({ }) => z.object({
         coverAlt: z.string(),
         title: z.string(),
         slug: z.string(),

@@ -1,6 +1,23 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
+.animate-scroll {
+	animation: scroll 30s linear infinite;
+	/* Add this to ensure it works properly */
+	transform: translateZ(0);
+	backface-visibility: hidden;
+  }
+  
+  @keyframes scroll {
+	0% {
+	  transform: translateX(0);
+	}
+	100% {
+	  transform: translateX(-50%);
+	}
+  }
+  
+
 @theme inline {
 	--font-sans: var(--font-geist);
 	--font-serif: 'Georgia', serif;

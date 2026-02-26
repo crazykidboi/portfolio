@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 const { article } = Astro.props;
 
 if (article === undefined) {
-    return new Response("Article not found", { status: 404 });
+    return new Response("Project not found", { status: 404 });
 }
 
 const { Content } = await render(article);
@@ -36,22 +36,22 @@ const relatedArticles = allArticles.filter(
 
 <InfoLayout title={article.data.title} frontmatter={article.data}>
     <section class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
+        <p class="mt-0.5 text-sm text-zinc-600">
+            {formatDate((article.data.pubDate))} 
+            &middot; {article.data.mainRole}
+        </p>
         <Prose>
             <Content />
         </Prose>
 
-        <p class="my-4 text-sm italic text-zinc-300">
-            This is an excerpt from {`${article.data.mainRole}'s`}
-            <a href={article.data.originalLink} target="_blank" class="underline underline-offset-4 decoration-zinc-100 hover:decoration-white hover:text-white">
-                {article.data.title}
-            </a>
-            article. I highly recommend you give it a read!
-        </p>
+        
+
+        
 
         {
             relatedArticles.length > 0 && (
                 <div>
-                    <h2 class="mt-8 sm:mt-12 text-lg text-zinc-400 font-medium">
+                    <h2 class="mt-8 sm:mt-12 text-xl text-zinc-700 font-medium italic">
                         Related Articles
                     </h2>
 
@@ -59,10 +59,10 @@ const relatedArticles = allArticles.filter(
                         {relatedArticles.map((article) => (
                             <li class="group">
                                 <a href={`/work/${article.data.slug}`}>
-                                    <h3 class="text-xl text-zinc-50 group-hover:text-white underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500">
+                                    <h3 class="text-xl text-zinc-700 group-hover:text-white underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500">
                                         {article.data.title}
                                     </h3>
-                                    <p class="mt-0.5 text-sm text-zinc-400">
+                                    <p class="mt-0.5 text-sm text-zinc-700 italic">
                                         {formatDate((article.data.pubDate))} 
                                         &middot; {article.data.mainRole}
                                     </p>

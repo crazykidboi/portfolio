@@ -1,10 +1,10 @@
 ---
-
 isDraft: false
 title: Sum of Y'all
 snippet: We're creating more than ever, but it weighs nothing.
-slug: make-something-heavy
+slug: sum-of-yall
 mainRole: Lighting Design
+company: Pearl Arts
 category: Lighting Design
 readingDuration: 1
 pubDate: 2025 3 9
@@ -15,33 +15,29 @@ cover: /src/assets/workPhotos/Sum_1.jpg
 ---
 
 # Sum of Y'all
-We're creating more than ever, but it weighs nothing.
+
+I had never known about <a href="https://www.pearlartsmovement.org">Pearl Arts - Movement and Sound</a> before, but after meeting Herman and Staycee I knew it was going to be a fun project. The goal was to create a lighting, projection, sound and dance performance where each element interacted with the others. After building an updated lighting plot on, my main focus was to build cues that aligned with the beautiful projections of <a href="https://stage.scottnandrew.com/statement">Scott Andrew</a>. The process involved working section by section with Andrew so that each video had corresponding lighting; matching hues, timings, and transitions. Around tech week we met the rest of the team and the dancers, all of which were great at what they did and were always ready to work with any tech issues we came across. In the end the show went great, we sold out nearly every show!
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+  <iframe 
+    src="https://www.youtube.com/embed/gEQPG_13CnE?autoplay=1&mute=1&loop=1&playlist=gEQPG_13CnE&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1" 
+    title="YouTube video player" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen
+  ></iframe>
+</div>
+
+![image](/src/assets/workPhotos/sum_011.jpg)
+*Photos by Liam Lyons IV*
 
 ![image](/src/assets/workPhotos/Sum_2.jpg)
+*Poster by Pearl Arts*
 
+![image](/src/assets/workPhotos/sum_004.jpg)
 
-## We instinctively tie weight to value.
-Gold is solid. Wood is dense. And back when we still printed things on paper, a heavy stapler was a luxury.
+![image](/src/assets/workPhotos/sum_006.jpg)
 
-If something is heavy, we assume it matters. And often, it does. Weight signals quality, durability, presence, permanence.
+![image](/src/assets/workPhotos/sum_010.jpg)
 
-Even the objects we choose reflect this. At first, we buy cheap, lightweight furniture—easy to build, easy to trash. But eventually, <strong> we want weight. </strong> A solid oak table. A leather armchair. Something built to last. Heavy things comfort us—a weighted blanket stills the body, a heavy door makes a home feel secure.
-
-Winners of major awards almost always say the same thing as they lift the trophy: ‘Wow! It’s so heavy.’ As though the weight itself validates the achievement. Simple logic: Light achievements beget light awards. Heavy achievements beget heavy awards.
-
-We accept this in the physical world.
-
-But online, we forget.
-
-## The internet is (mostly) a machine for light things.
-<strong> The modern makers’ machine does not want you to create heavy things. </strong> It runs on the internet—powered by social media, fueled by mass appeal, and addicted to speed. It thrives on spikes, scrolls, and screenshots. It resists weight and avoids friction. It does not care for patience, deliberation, or anything but production.
-
-It doesn’t care what you create, only that you keep creating. Make more. Make faster. Make lighter. (Make slop if you have too.) Make something that can be consumed in a breath and discarded just as quickly. Heavy things take time. And here, time is a tax. And so, we oblige—everyone does.
-
-<strong> We create more than ever, but it weighs nothing. </strong>
-
-<strong> AI now promises results without the reckoning, but frictionless creation leads to weightless rewards.</strong> No one dreams of merely pushing a button to generate their magnum opus. The output matters, but the intention, the struggle, the care is what makes it count —what gives it weight.
-
-Of course, there’s a range from light to heavy, and not all light things are bad. An entire economy thrives on lightness. Memes, breaking news, and celebrity drama shape culture in spades. But movement isn’t meaning. A million views doesn’t make a pound of significance. <strong> Light things shape culture, but rarely shape us. </strong>
-
-<strong>Creation isn’t just about output. It’s a process of becoming. The best work shapes the maker as much as the audience. A founder builds a startup to prove they can. A writer wrestles an idea into clarity. You don’t just create heavy things. You become someone who can. </strong>
+![image](/src/assets/workPhotos/sum_014.jpg)
