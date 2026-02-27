@@ -8,15 +8,17 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://lyonsiv.mov',
+  base: '/',
   
   output: 'static',
  vite: {
    plugins: [tailwindcss()],
-   
  },
- devToolbar: {
-  enabled: false,
-},
+
+  devToolbar: {
+    enabled: false,
+  },
+
  integrations: [react()],
  experimental: {
    fonts: [{
