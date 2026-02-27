@@ -23,7 +23,7 @@ const categories = [...new Set(articles.map(article => article.data.category))].
 
         <ul class="mt-6 flex items-center gap-4" id="category-nav">
             <li>
-                <a href="/work" data-category="all" class="category-link w-fit px-4 py-1 text-sm bg-transparent rounded-full transition-all duration-300 ease-in-out text-white bg-zinc-100/20 outline-2 outline-offset-2 outline-zinc-100/20">
+                <a href="/portfolio/work" data-category="all" class="category-link w-fit px-4 py-1 text-sm bg-transparent rounded-full transition-all duration-300 ease-in-out text-white bg-zinc-100/20 outline-2 outline-offset-2 outline-zinc-100/20">
                     All
                 </a>
             </li>
@@ -31,7 +31,7 @@ const categories = [...new Set(articles.map(article => article.data.category))].
                 categories.map((category) => (
                     <li>
                         <a
-                            href={`/work?category=${category.toLowerCase()}`}
+                            href={`/portfolio/work?category=${category.toLowerCase()}`}
                             data-category={category.toLowerCase()}
                             class="category-link w-fit px-4 py-1 text-lg bg-transparent rounded-full transition-all duration-300 ease-in-out text-zinc-400 hover:text-zinc-200"
                         >
@@ -49,7 +49,7 @@ const categories = [...new Set(articles.map(article => article.data.category))].
                     <li class="portfolio-item" data-category={article.data.category?.toLowerCase()}>
                         <a
                             class="space-y-0.8 group max-w-300"
-                            href={`/work/${article.data.slug}`}
+                            href={`/portfolio/work/${article.data.slug}`}
                         >
                             <h2 class="text-lg text-zinc-300 group-hover:text-white text-balance underline group-hover:underline-offset-2 decoration-transparent group-hover:decoration-zinc-500">
                                 {article.data.title}
