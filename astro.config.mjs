@@ -12,9 +12,7 @@ export default defineConfig({
   output: 'static',
  vite: {
    plugins: [tailwindcss()],
-   server: {
-     allowedHosts: ['lyonsiv.mov'] // Add this line to allow the specific host
-   }
+   
  },
  devToolbar: {
   enabled: false,
