@@ -13,7 +13,7 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
   site: 'https://crazykidboi.github.io',
   base: '/portfolio',
-  output: 'server',
+  output: 'static',
  vite: {
    plugins: [tailwindcss()],
    server: {
