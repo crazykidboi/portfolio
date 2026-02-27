@@ -1,10 +1,12 @@
 {
   "name": "nikola-tesla",
   "type": "module",
+  "private": true,
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm ci && vite build",
+    "start": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
