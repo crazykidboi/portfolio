@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-mdysn4oi> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.18.0"><title>Liam Lyons IV</title><meta name="description" content="Liam Lyons IV is a designer, programmer and designer in the Pittsburgh area"><meta property="og:url" content="https://nikola.fluidinterfaces.com/"><meta property="og:type" content="website"><meta property="og:title" content="Liam Lyons IV"><meta property="og:description" content="Liam Lyons IV is a designer, programmer and designer in the Pittsburgh area"><meta property="og:image" content="/social-image.jpg"><!-- Twitter Meta Tags --><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="nikola.fluidinterfaces.com"><meta property="twitter:url" content="https://nikola.fluidinterfaces.com/"><meta name="twitter:title" content="Liam Lyons IV"><meta name="twitter:description" content="Liam Lyons IV is a designer, programmer and designer in the Pittsburgh area"><meta name="twitter:image" content="/social-image.jpg"><style>@font-face{font-family:Geist-5985675a67df2d44;src:url("/portfolio/_astro/fonts/fe7c0e519c833863.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:400;font-style:normal;}@font-face{font-family:"Geist-5985675a67df2d44 fallback: Arial";src:local("Arial");font-display:swap;font-weight:400;font-style:normal;size-adjust:104.7553%;ascent-override:95.9379%;descent-override:28.1609%;line-gap-override:0%;}:root{--font-geist:Geist-5985675a67df2d44,"Geist-5985675a67df2d44 fallback: Arial",Inter,sans-serif;}</style><link rel="preload" href="/portfolio/_astro/fonts/fe7c0e519c833863.woff2" as="font" type="font/woff2" crossorigin><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/portfolio/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CDGfc0hd.js"></script><style>.astro-loading-indicator {
+  pointer-events: none;
+  background-color: #f4f4f5;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transition: transform 300ms ease-out, opacity 150ms 150ms ease-in;
+	transform: translate3d(0, 0, 0) scaleX(var(--progress, 0));
+  transform-origin: 0;
+}
+
+[dir="rtl"] .astro-loading-indicator {
+  transform-origin: 100% 0;
+}
+</style><script>(function(){const className = "astro-loading-indicator";
+const animationDuration = 300;
+const threshold = 200;
+
+(() => {
+  let progress = 0.25
+  let opacity = 0
+  /** @type {number | undefined} */
+  let trickleInterval = undefined
+  /** @type {number | undefined} */
+  let thresholdTimeout = undefined;
+
+  const element = document.createElement("div")
+  element.classList.add(className)
+  element.ariaHidden = "true"
+
+  /** @param {typeof progress} _progress */
+  const setProgress = (_progress) => {
+    progress = _progress
+    element.style.setProperty('--progress', String(progress))
+  }
+
+  /** @param {typeof opacity} _opacity */
+  const setOpacity = (_opacity) => {
+    opacity = _opacity
+    element.style.setProperty('opacity', String(opacity))
+  }
+
+  setOpacity(opacity)
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.prepend(element)
+  })
+
+  document.addEventListener("astro:before-preparation", () => {
+    thresholdTimeout = setTimeout(() => {
+      setOpacity(1)
+      trickleInterval = window.setInterval(() => {
+        setProgress(progress + Math.random() * 0.03)
+      }, animationDuration)
+    }, threshold)
+  })
+
+  document.addEventListener("astro:before-swap", (ev) => {
+    if (!thresholdTimeout) {
+      return
+    }
+    window.clearTimeout(thresholdTimeout)
+
+    ev.newDocument.body.prepend(element)
+    window.clearInterval(trickleInterval)
+    trickleInterval = undefined
+
+    setProgress(1)
+    window.setTimeout(() => {
+      setOpacity(0)
+    }, animationDuration / 2)
+
+    window.setTimeout(() => {
+      setProgress(0.25)
+    }, animationDuration * 2)
+  })
+})()
+})();</script><link rel="stylesheet" href="/portfolio/_astro/about.D_celY8v.css"></head> <body class="font-sns min-h-screen bg-backgroundcolor1" data-astro-cid-mdysn4oi>  <div class="flex relative gap-0 w-full"> <nav class="relative w-4 md:min-w-2xs xl:min-w-sm sm:min-h-screen sm:ml-4 sm:pb-4"> <div class="w-full h-full max-sm:w-4 md:max-w-2xs xl:max-w-sm fixed -z-10 sm:bottom-4 sm:rounded-b-full overflow-hidden"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z2cBil5" prefix="r1" component-url="/portfolio/_astro/warp-background.D5IqYyhc.js" component-export="default" renderer-url="/portfolio/_astro/client.Dc9Vh3na.js" props="{&quot;color1&quot;:[0,&quot;#111111&quot;],&quot;color2&quot;:[0,&quot;#222222&quot;],&quot;color3&quot;:[0,&quot;#eb533d&quot;],&quot;speed&quot;:[0,0.05],&quot;swirl&quot;:[0,1.4],&quot;swirlIterations&quot;:[0,7],&quot;shapeScale&quot;:[0,0.3]}" ssr client="load" opts="{&quot;name&quot;:&quot;WarpBackground&quot;,&quot;value&quot;:true}" await-children><div style="width:100%;height:100%"></div><!--astro:end--></astro-island> </div> </nav> <main class="relative w-auto">  <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-between gap-15"> <div class="space-y-4 sm:space-y-12"> <h1 class="text-text1 font-serif font-bold text-balance text-4xl md:text-6xl xl:text-8xl tracking-normal">  About Liam Lyons IV  </h1> <div> <img src="/portfolio/_astro/liamHeadshot.9evkU2S-_ZhIoL8.webp" alt loading="lazy" decoding="async" fetchpriority="auto" width="800" height="533"> </div> <p class="text-xl xl:text-xl text-zinc-500 text-balance">
+Liam Lyons IV (also known as William Lyons IV) creates technical art for theaters, concerts, and tours.
+                    Having worked with IPS in Nashville and local tours in Pittsburgh, and being Known for a tireless work ethic, 
+                    he thrives on pushing creative limits while staying on schedule and under budget. 
+                    Ready to travel—or relocate—so you can obtain flawless, immersive lighting that elevates every show.
+</p> <p class="text-xl xl:text-xl text-zinc-500 text-balance">
+He currently works at a variety of theaters in the Pittsburgh area, he loves to travel and see shows in the city when he can. 
+                    In addition to lighting design, he has a BA in Film 
+                    at Chatham University, so you can sometimes find him making short films, documentaries, music videos, 
+                    and do photography here and there. On his off time he loves learning about new and
+                    old technology. Coding is also a side project from time to time, including building this exact website. 
+                    He loves to drum when he can, he is in two bands at the moment and often plays 
+                    live and for studio recordings for friends. All around is always excited to try something new.
+</p> </div> <div class="space-y-2 text-base sm:text-lg"> <h2 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">Skills</h2> <ul class="px-4 text-zinc-400 list-disc list-outside"> <li>MA3</li> <li>ETC Ion XE, ETC Element 2, ETC Puck</li> <li>MagicQ MQ50</li> <li>Qlab</li> <li>QLC+</li> <li>MEWP Certified</li> <li>Concert and Theatre lighting focus and hang</li> </ul> </div> <div class="space-y-2 text-base sm:text-lg"> <h2 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">Companies worked with</h2> <ul class="px-4 text-zinc-400 list-disc list-outside"> <li>Integrated Production Solutions (IPS)</li> <li>Flyspace Productions</li> <li>Kellystrayhorn Theater</li> <li>New Hazlett Theater</li> <li>Pearl Arts</li> <li>Art Yard Theater</li> <li>Shadyside Academy</li> <li>University of Pittsburgh</li> <li>Chatham University</li> <li>Fireside Events LLC</li> </ul> </div> </div>  <footer class="py-4 px-4 sm:px-12 w-full fixed bottom-0 flex items-center gap-4 sm:gap-8 bg-zinc-900"> <div class="flex gap-0"> <!-- <ExternalLink href="/" openNewTab={false}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6 text-zinc-500 group-hover:text-zinc-100">
+                <title>Home</title>
+                <path fill="currentColor" fill-rule="evenodd" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" clip-rule="evenodd"/>
+            </svg>
+        </ExternalLink> --> <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path> </div> <a href="/work" target="_self" class="w-fit group flex items-center gap-1 text-base hover:text-zinc-100 cursor-pointer text-zinc-500"> Work  </a> <a href="/about" target="_self" class="w-fit group flex items-center gap-1 text-base hover:text-zinc-100 cursor-pointer text-zinc-500"> About  </a> <a href="/contact" target="_self" class="w-fit group flex items-center gap-1 text-base hover:text-zinc-100 cursor-pointer text-zinc-500"> Contact  </a> </footer> <!-- place to get icons https://iconsvg.xyz --> </main> </div>  </body></html>

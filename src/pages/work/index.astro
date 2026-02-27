@@ -1,55 +1,39 @@
 ---
 import clsx from "clsx";
-import { actions } from "astro:actions";
+import { getCollection } from "astro:content";
 import H1 from "../../components/h1.astro";
 import { formatDate } from "../../lib/utils";
 import InfoLayout from "../../layouts/InfoLayout.astro";
 
-const categoriesResult = await Astro.callAction(actions.categories.getCategories, null);
-const categories = categoriesResult?.data?.categories || [];
+// 1. Fetch all articles natively instead of using backend Actions
+const allArticles = await getCollection("articles");
 
-const selectedCategory = Astro.url.searchParams.get("category") || "all";
+// 2. Filter out drafts and sort them by date
+const articles = allArticles
+    .filter(article => !article.data.isDraft)
+    .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
 
-const articlesResult = await Astro.callAction(actions.categories.filterByCategory, {
-    category: selectedCategory,
-});
-
-if (articlesResult?.error) {
-    console.log("error", articlesResult.error);
-}
-
-const articles = (articlesResult?.data?.articles || [])
-    .filter(article => !article.data.isDraft) // Filter out draft articles
-    .sort((a, b) => {
-        return new Date(b.data.pubDate) - new Date(a.data.pubDate);
-    });
-
+// 3. Extract unique categories dynamically from your articles
+const categories = [...new Set(articles.map(article => article.data.category))].filter(Boolean);
 ---
-
-
-
 
 <InfoLayout>
     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
         <H1> Work </H1>
 
-        <ul class="mt-6 flex items-center gap-4">
+        <ul class="mt-6 flex items-center gap-4" id="category-nav">
             <li>
-                <a href="/work" class={clsx("w-fit px-4 py-1 text-sm bg-transparent rounded-full transition-all duration-300 ease-in-out",
-                    selectedCategory === "all" ? "text-white bg-zinc-100/20 outline-2 outline-offset-2 outline-zinc-100/20" : "text-zinc-400 hover:text-zinc-300"
-                )}>
+                <a href="/work" data-category="all" class="category-link w-fit px-4 py-1 text-sm bg-transparent rounded-full transition-all duration-300 ease-in-out text-white bg-zinc-100/20 outline-2 outline-offset-2 outline-zinc-100/20">
                     All
                 </a>
             </li>
-
             {
                 categories.map((category) => (
                     <li>
                         <a
                             href={`/work?category=${category.toLowerCase()}`}
-                            class={clsx("w-fit px-4 py-1 text-llg bg-transparent rounded-full transition-all duration-300 ease-in-out",
-                                selectedCategory === category.toLowerCase() ? "text-white bg-zinc-100/20 outline-2 outline-offset-2 outline-zinc-100/20" : "text-zinc-400 hover:text-zinc-200"
-                            )}
+                            data-category={category.toLowerCase()}
+                            class="category-link w-fit px-4 py-1 text-lg bg-transparent rounded-full transition-all duration-300 ease-in-out text-zinc-400 hover:text-zinc-200"
                         >
                             {category}
                         </a>
@@ -58,10 +42,11 @@ const articles = (articlesResult?.data?.articles || [])
             }
         </ul>
 
-        <ul class="grid max-w-300 grid-cols-3 gap-6 mt-3 space-y-2">
+        <ul class="grid max-w-300 grid-cols-3 gap-6 mt-3 space-y-2" id="portfolio-grid">
             {
                 articles.map((article) => (
-                    <li>
+                    // We attach the category as a data attribute for our script to read
+                    <li class="portfolio-item" data-category={article.data.category?.toLowerCase()}>
                         <a
                             class="space-y-0.8 group max-w-300"
                             href={`/work/${article.data.slug}`}
@@ -82,3 +67,33 @@ const articles = (articlesResult?.data?.articles || [])
         </ul>
     </div>
 </InfoLayout>
+
+<script>
+    function filterPortfolio() {
+        const params = new URLSearchParams(window.location.search);
+        const selectedCategory = params.get("category") || "all";
+
+        // Update active state on links
+        document.querySelectorAll('.category-link').forEach(link => {
+            if (link.dataset.category === selectedCategory) {
+                link.classList.add('text-white', 'bg-zinc-100/20', 'outline-2', 'outline-offset-2', 'outline-zinc-100/20');
+                link.classList.remove('text-zinc-400', 'hover:text-zinc-200');
+            } else {
+                link.classList.remove('text-white', 'bg-zinc-100/20', 'outline-2', 'outline-offset-2', 'outline-zinc-100/20');
+                link.classList.add('text-zinc-400', 'hover:text-zinc-200');
+            }
+        });
+
+        // Hide or show the portfolio items
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            if (selectedCategory === "all" || item.dataset.category === selectedCategory) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    }
+
+    // Run the filter when the page loads
+    filterPortfolio();
+</script>
