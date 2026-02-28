@@ -10,7 +10,7 @@ readingDuration: 1
 pubDate: 2025 4 4
 coverAlt: Tobi Lutke - Shopify CEO - I heard this internal memo of mine is being leaked right now, so here it is
 originalLink: https://thenanyu.com/
-cover: ../../assets/workPhotos/fresh_zuly/zuly_004.avif
+cover: ../assets/workPhotos/fresh_zuly/zuly_004.avif
 ---
 
 # Freshworks: Zuly Inirio - La Voz que Soy
