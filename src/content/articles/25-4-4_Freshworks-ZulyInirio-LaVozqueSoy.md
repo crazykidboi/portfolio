@@ -28,7 +28,7 @@ This was my first Freshworks project at the Kellystrayhorn, it also helped that 
   ></iframe>
 </div>
 
-![image](/src/assets/workPhotos/fresh_zuly/zuly_004.avif)
+![image](../../assets/workPhotos/fresh_zuly/zuly_004.avif)
 
 ![image](/src/assets/workPhotos/fresh_zuly/zuly_001.avif)
 
