@@ -58,7 +58,7 @@ const categories = [...new Set(articles.map(article => article.data.category))].
                         
                             <p class="text-sm text-zinc-500 italic">
                                 {formatDate(article.data.pubDate)} &middot;{" "}
-                                {article.data.mainRole}
+                                {article.data.mainRole} &middot;{" "}
                                 {article.data.company}
                             </p>
                             <img src={article.data.cover} class="w-300 aspect-3/4 h-auto overflow-hidden object-cover rounded-lg"/>
