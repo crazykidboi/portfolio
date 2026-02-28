@@ -4,6 +4,8 @@ import { getCollection } from "astro:content";
 import H1 from "../../components/h1.astro";
 import { formatDate } from "../../lib/utils";
 import InfoLayout from "../../layouts/InfoLayout.astro";
+import { Image } from "astro:assets";
+import sum4 from "../../assets/workPhotos/sum_004.jpg";
 
 // 1. Fetch all articles natively instead of using backend Actions
 const allArticles = await getCollection("articles");

@@ -11,7 +11,6 @@ pubDate: 2025 3 9
 coverAlt: Women Holding Things - Maira Kalman, 2022.
 originalLink: https://www.workingtheorys.com/p/make-something-heavy
 cover: /src/assets/workPhotos/Sum_1.jpg
-
 ---
 
 # Sum of Y'all
@@ -34,7 +33,9 @@ I had never known about <a href="https://www.pearlartsmovement.org">Pearl Arts -
 ![image](/src/assets/workPhotos/Sum_2.jpg)
 *Poster by Pearl Arts*
 
-![image](/src/assets/workPhotos/sum_004.jpg)
+<div>
+  <Image src={sum4} alt="" width={800} quality={max}/>
+</div> 
 
 ![image](/src/assets/workPhotos/sum_006.jpg)
 
