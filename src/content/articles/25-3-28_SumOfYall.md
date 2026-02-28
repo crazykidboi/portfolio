@@ -10,7 +10,7 @@ readingDuration: 1
 pubDate: 2025 3 9
 coverAlt: Women Holding Things - Maira Kalman, 2022.
 originalLink: https://www.workingtheorys.com/p/make-something-heavy
-cover: /src/assets/workPhotos/Sum_1.jpg
+cover: ../../assets/workPhotos/Sum_1.jpg
 ---
 
 # Sum of Y'all
