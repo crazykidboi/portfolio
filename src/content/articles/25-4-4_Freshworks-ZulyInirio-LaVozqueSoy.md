@@ -28,14 +28,14 @@ This was my first Freshworks project at the Kellystrayhorn, it also helped that 
   ></iframe>
 </div>
 
-![image](../../assets/workPhotos/fresh_zuly/zuly_004.avif)
+![image](/src/assets/workPhotos/fresh_zuly/zuly_004.avif)
 
-![image](../../assets/workPhotos/fresh_zuly/zuly_001.avif)
+![image](/src/assets/workPhotos/fresh_zuly/zuly_001.avif)
 
-![image](../../assets/workPhotos/fresh_zuly/zuly_002.avif)
+![image](/src/assets/workPhotos/fresh_zuly/zuly_002.avif)
 
-![image](../../assets/workPhotos/fresh_zuly/zuly_005.avif)
+![image](/src/assets/workPhotos/fresh_zuly/zuly_005.avif)
 
-![image](../../assets/workPhotos/fresh_zuly/zuly_003.avif)
+![image](/src/assets/workPhotos/fresh_zuly/zuly_003.avif)
 
 *Photos by <a href="https://kelly-strayhorn.org">Kelly-Strayhorn Theater</a>*
