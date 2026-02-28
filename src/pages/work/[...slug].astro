@@ -33,8 +33,8 @@ const relatedArticles = allArticles.filter(
     <section class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
         <p class="mt-0.5 text-sm text-zinc-600">
             {formatDate((article.data.pubDate))} 
-            &middot;
-            {article.data.mainRole}
+            &middot; {article.data.mainRole}
+            &middot; {article.data.company}
         </p>
         <Prose>
             <Content />
