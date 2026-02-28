@@ -16,7 +16,7 @@ cover: /workPhotos/fresh_moire/moire_003.avif
 # Freshworks: Moire del Carmen: Baquiné
 
 
-![image](workPhotos/fresh_moire/moire_001.avif)
+![image](/workPhotos/fresh_moire/moire_001.avif)
 ![image](/workPhotos/fresh_moire/moire_002.avif)
 ![image](/workPhotos/fresh_moire/moire_004.avif)
 ![image](/workPhotos/fresh_moire/moire_005.avif)
