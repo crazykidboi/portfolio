@@ -16,7 +16,7 @@ cover: /workPhotos/Lantern_3.jpg
 # University of Pittsburgh Lantern Night
 At this point in my career, this was probably the most high level and high stress event I've worked, yet the challenge was perfect me in my development as an artist. The MagicQ MQ50 lighting console was something I had never worked with before, so I spent a lot of time in prep learning the ropes. 
 
-![image](/workPhotos/Lantern_8.JPG)
+![image](/workPhotos/Lantern_8.jpg)
 *Photos by <a href="https://www.claireemchmedia.com/portraits/">Claire Emch</a>*
 
 From there, I worked with the <a href="https://www.fireside-events.com">Fireside</a> team to build out the lighting rigs; we had a mix lights including Chauvet Maverick Storm 4 Profiles, Storm 2s, and Rogue Outcast Washes. We used the storms (as our highest output fixtures) to light an entire face of the Cathedral of Learning building and the Chapel on Pitt's Campus; at night during the event this created an amazing effect. The washes and other assorted fixtures were used as front and back light for the podium on the stage, however the most complex lighting element wasn't even done yet.
