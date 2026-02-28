@@ -16,6 +16,7 @@ const articles = defineCollection({
         isDraft: z.boolean().default(false),
         updatedDate: z.coerce.date().optional(),
         mainRole: z.string().default('Designer'),
+        company: z.string(),
         relatedArticles: z.array(reference('articles')).optional(),
         cover: z.string(),
     }),
