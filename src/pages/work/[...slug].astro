@@ -3,8 +3,6 @@ import { getCollection, render } from "astro:content";
 import { formatDate } from "../../lib/utils";
 import Prose from "../../components/prose.astro";
 import InfoLayout from "../../layouts/InfoLayout.astro";
-import { Image } from "astro:assets";
-import headshot from "../assets/liamHeadshot.jpg";
 
 // This is the function Astro was looking for! It tells the build exactly what pages to generate.
 export async function getStaticPaths() {

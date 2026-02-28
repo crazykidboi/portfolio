@@ -27,15 +27,13 @@ I had never known about <a href="https://www.pearlartsmovement.org">Pearl Arts -
   ></iframe>
 </div>
 
-![image](/src/assets/workPhotos/sum_011.jpg)
+![image](../../assets/workPhotos/sum_011.jpg)
 *Photos by Liam Lyons IV*
 
 ![image](/src/assets/workPhotos/Sum_2.jpg)
 *Poster by Pearl Arts*
 
-<div>
-  <Image src={sum4} alt="" width={800} quality={max}/>
-</div> 
+![image](/src/assets/workPhotos/sum_004.jpg)
 
 ![image](/src/assets/workPhotos/sum_006.jpg)
 
