@@ -10,7 +10,7 @@ readingDuration: 1
 pubDate: 2026 1 10
 coverAlt: Tobi Lutke - Shopify CEO - I heard this internal memo of mine is being leaked right now, so here it is
 originalLink: https://thenanyu.com/ux.html
-cover: /src/assets/workPhotos/1-10-2026_PrimtestageAwards/primestage_002.avif
+cover: /workPhotos/1-10-2026_PrimtestageAwards/primestage_002.avif
 
 ---
 
@@ -26,7 +26,7 @@ cover: /src/assets/workPhotos/1-10-2026_PrimtestageAwards/primestage_002.avif
   ></iframe>
 </div>
 
-![image](/src/assets/workPhotos/1-10-2026_PrimtestageAwards/primestage_002.avif)
+![image](/workPhotos/1-10-2026_PrimtestageAwards/primestage_002.avif)
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
   <iframe 
@@ -38,8 +38,8 @@ cover: /src/assets/workPhotos/1-10-2026_PrimtestageAwards/primestage_002.avif
   ></iframe>
 </div>
 
-![image](/src/assets/workPhotos/1-10-2026_PrimtestageAwards/primestage_003.avif)
+![image](/workPhotos/1-10-2026_PrimtestageAwards/primestage_003.avif)
 
-![image](/src/assets/workPhotos/1-10-2026_PrimtestageAwards/primestage_004.avif)
+![image](/workPhotos/1-10-2026_PrimtestageAwards/primestage_004.avif)
 
-![image](/src/assets/workPhotos/1-10-2026_PrimtestageAwards/IMG_9709.JPG)
+![image](/workPhotos/1-10-2026_PrimtestageAwards/IMG_9709.JPG)

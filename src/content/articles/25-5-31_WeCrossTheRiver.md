@@ -10,14 +10,14 @@ readingDuration: 1
 pubDate: 2025 5 31
 coverAlt: Tobi Lutke - Shopify CEO - I heard this internal memo of mine is being leaked right now, so here it is
 originalLink: https://thenanyu.com/ux.html
-cover: /src/assets/workPhotos/kat.JPG
+cover: /workPhotos/kat.JPG
 ---
 
 # We Cross the River
 
 I had the pleasure or working with Media Designer Aaron Henderson to sync visual text with live vocalists. I created Qlab scripts to achieve this, decreasing and increasing video speed using midi triggers, this was crucial in making sure the lyrics aligned with the vocalists on stage. There were two shows, one at Chatham University in Pittsburgh, and another at the National Opera House in New York City.
 
-![image](/src/assets/workPhotos/kat2.jpeg)
+![image](/workPhotos/kat2.jpeg)
 *Photo by <a href="https://www.facebook.com/Kamraton/">Kamraton</a>*
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
@@ -50,7 +50,7 @@ I had the pleasure or working with Media Designer Aaron Henderson to sync visual
   ></iframe>
 </div>
 
-![image](/src/assets/workPhotos/kat.JPG)
+![image](/workPhotos/kat.JPG)
 
 
 

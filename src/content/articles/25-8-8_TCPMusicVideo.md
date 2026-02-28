@@ -10,7 +10,7 @@ readingDuration: 1
 pubDate: 2025 8 8
 coverAlt: Tobi Lutke - Shopify CEO - I heard this internal memo of mine is being leaked right now, so here it is
 originalLink: https://thenanyu.com/
-cover: /src/assets/workPhotos/TPC_bandphotos_edits_005.jpg
+cover: /workPhotos/TPC_bandphotos_edits_005.jpg
 ---
 
 # The Challenger Project Music Videos
@@ -25,6 +25,6 @@ cover: /src/assets/workPhotos/TPC_bandphotos_edits_005.jpg
   ></iframe>
 </div>
 
-![image](/src/assets/workPhotos/TPC_bandphotos_edits_005.jpg)
+![image](/workPhotos/TPC_bandphotos_edits_005.jpg)
 
 
