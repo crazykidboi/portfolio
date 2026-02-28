@@ -7,7 +7,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://lyonsiv.mov',
+  site: 'https://www.lyonsiv.mov',
   
   
   output: 'static',
