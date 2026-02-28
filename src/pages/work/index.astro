@@ -70,13 +70,11 @@ const categories = [...new Set(articles.map(article => article.data.category))].
 </InfoLayout>
 
 <script>
-    function filterPortfolio() {
-        const params = new URLSearchParams(window.location.search);
-        const selectedCategory = params.get("category") || "all";
-
+    // 1. Extract the filtering logic into a reusable function
+    function filterPortfolio(category) {
         // Update active state on links
         document.querySelectorAll('.category-link').forEach(link => {
-            if (link.dataset.category === selectedCategory) {
+            if (link.dataset.category === category) {
                 link.classList.add('text-white', 'bg-zinc-100/20', 'outline-2', 'outline-offset-2', 'outline-zinc-100/20');
                 link.classList.remove('text-zinc-400', 'hover:text-zinc-200');
             } else {
@@ -87,7 +85,7 @@ const categories = [...new Set(articles.map(article => article.data.category))].
 
         // Hide or show the portfolio items
         document.querySelectorAll('.portfolio-item').forEach(item => {
-            if (selectedCategory === "all" || item.dataset.category === selectedCategory) {
+            if (category === "all" || item.dataset.category === category) {
                 item.style.display = "block";
             } else {
                 item.style.display = "none";
@@ -95,6 +93,31 @@ const categories = [...new Set(articles.map(article => article.data.category))].
         });
     }
 
-    // Run the filter when the page loads
-    filterPortfolio();
+    // 2. Run the filter immediately when the page first loads
+    const initialParams = new URLSearchParams(window.location.search);
+    const initialCategory = initialParams.get("category") || "all";
+    filterPortfolio(initialCategory);
+
+    // 3. Listen for clicks on the category buttons
+    document.querySelectorAll('.category-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Stop the browser from trying to reload the page
+            
+            const selectedCategory = link.dataset.category;
+            
+            // Update the URL bar silently so it looks nice
+            const url = new URL(link.href);
+            history.pushState(null, '', url);
+
+            // Run our instant filter!
+            filterPortfolio(selectedCategory);
+        });
+    });
+
+    // 4. Make sure the browser's Back/Forward buttons still work
+    window.addEventListener('popstate', () => {
+        const params = new URLSearchParams(window.location.search);
+        const category = params.get("category") || "all";
+        filterPortfolio(category);
+    });
 </script>
