@@ -66,6 +66,9 @@
           "type": "string",
           "default": "Designer"
         },
+        "company": {
+          "type": "string"
+        },
         "relatedArticles": {
           "type": "array",
           "items": {
@@ -124,6 +127,7 @@
         "pubDate",
         "readingDuration",
         "originalLink",
+        "company",
         "cover"
       ],
       "additionalProperties": false
