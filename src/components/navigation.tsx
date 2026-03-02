@@ -27,9 +27,9 @@ export default function Navigation({ children }: { children: React.ReactNode; })
                             animate={{ filter: "blur(0px)", opacity: 1 }}
                             exit={{ filter: "blur(20px)", opacity: 0 }}
                             onClick={() => setIsOpen(false)}
-                            className="lg:hidden absolute z-50 w-full h-full flex flex-col gap-4 top-0 bg-zinc-900/20 backdrop-blur-md">
+                            className="lg:hidden absolute z-50 w-full h-full flex flex-col gap-4 top-0 bg-zinc-900/20 backdrop-blur-sm">
 
-                            <div className="fixed bottom-20 sm:bottom-32 left-4 sm:left-8 flex flex-col items-start justify-center gap-4">
+                            <div className="fixed bottom-20 sm:bottom-32 right-4 sm:left-8 flex flex-col items-start justify-center gap-4">
                                 <MobileLink href="/work">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" aria-hidden>
                                         <title>Work Icon</title>
