@@ -25,6 +25,16 @@ From there, I worked with the <a href="https://www.fireside-events.com">Fireside
 
 I had the pleasure of working with the team at <a href="https://www.crowdsynctechnology.com">Crowdsync</a> to use their custom bracelet wireless LED system, which has been used by artists like Kygo, organizing like iHeartradio, and in football stadiums across the US. We used these as the lanterns the entire audience of 3,000 plus persons would be holding during the show. I used their DMX node to control thousands of grouped LEDs for the biggest moment of the night; the passing of the lanterns from faculty to the first year students of the university. 
 
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+  <iframe 
+    src="https://www.youtube.com/embed/4EKBNeGVP2c?autoplay=1&mute=1&loop=1&playlist=4EKBNeGVP2c&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1" 
+    title="YouTube video player" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen
+  ></iframe>
+</div>
+
 ![image](/workPhotos/Lantern_9.JPG)
 
 This moment of the night required that all the lights I've mentioned transition from blue to gold. A simple thing in theory but took the work of myself and the entire Fireside team to pull off successfully. The night of the event had a few bumps in the road but with a little quick thinking and the support of the team around me we got it done. The entire crowd cheered and we knew we'd made these freshman's college experience great. What a great night this was, and what a fabulous experience.
