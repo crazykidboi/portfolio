@@ -30,7 +30,7 @@ const relatedArticles = allArticles.filter(
 ---
 
 <InfoLayout title={article.data.title} frontmatter={article.data}>
-    <section class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
+    <section class="p-8 md:p-11 sm:px-50 pb-20 min-h-dvh">
         <p class="mt-0.5 text-sm text-zinc-600">
             {formatDate((article.data.pubDate))} 
             &middot; {article.data.mainRole}
@@ -43,18 +43,18 @@ const relatedArticles = allArticles.filter(
         {
             relatedArticles.length > 0 && (
                 <div>
-                    <h2 class="mt-8 sm:mt-12 text-xl text-zinc-700 font-medium italic">
+                    <h2 class="mt-8 sm:mt-12 text-xl text-zinc-600 font-medium italic">
                         Related Articles
                     </h2>
 
-                    <ul class="mt-2.5">
+                    <ul class="mt-2.5 pb-10">
                         {relatedArticles.map((related) => (
                             <li class="group">
                                 <a href={`/work/${related.slug || related.id || related.data.slug}`}>
-                                    <h3 class="text-xl text-zinc-700 group-hover:text-white underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500">
+                                    <h3 class="text-xl text-zinc-600 group-hover:text-white underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500">
                                         {related.data.title}
                                     </h3>
-                                    <p class="mt-0.5 text-sm text-zinc-700 italic">
+                                    <p class="mt-0.5 text-sm text-zinc-600 group-hover:text-white italic">
                                         {formatDate((related.data.pubDate))} 
                                         &middot;
                                         {related.data.mainRole}
