@@ -6,26 +6,26 @@ import react from '@astrojs/react';
 
 
 // https://astro.build/config
-// export default defineConfig({
+export default defineConfig({
   
   
-  //output: 'static',
- //vite: {
-   //plugins: [tailwindcss()],
- //},
+  output: 'static',
+ vite: {
+   plugins: [tailwindcss()],
+ },
 
-  //devToolbar: {
-    //enabled: false,
-  //},
+  devToolbar: {
+    enabled: false,
+  },
 
- //integrations: [react()],
- //experimental: {
-   //fonts: [{
-     //provider: fontProviders.google(),
-     //name: "Geist",
-     //cssVariable: "--font-geist",
-     //fallbacks: ["Inter", "sans-serif"],
-   //}]
- //},
+ integrations: [react()],
+ experimental: {
+   fonts: [{
+     provider: fontProviders.google(),
+     name: "Geist",
+     cssVariable: "--font-geist",
+     fallbacks: ["Inter", "sans-serif"],
+   }]
+ },
  
-//});
+});
