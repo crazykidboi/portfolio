@@ -1,8 +1,8 @@
 {
-  "name": "nikola-tesla",
+  "name": "lyonsiv",
   "type": "module",
-  "private": true,
-  "version": "0.0.1",
+  "private": false,
+  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,23 +13,24 @@
   "dependencies": {
     "@astrojs/react": "^4.4.2",
     "@paper-design/shaders-react": "^0.0.29",
-    "@tailwindcss/vite": "^4.1.18",
-    "@types/react": "^19.2.7",
+    "@tailwindcss/oxide": "4.2.0",
+    "@tailwindcss/vite": "^4.2.1",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^5.16.6",
+    "astro": "^5.18.0",
     "astro-loading-indicator": "^0.7.1",
     "build": "^0.1.4",
     "clsx": "^2.1.1",
     "dev": "^0.1.3",
-    "motion": "^12.23.26",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
+    "motion": "^12.34.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
-    "autoprefixer": "^10.4.23",
+    "autoprefixer": "^10.4.27",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.2.1"
   }
 }
