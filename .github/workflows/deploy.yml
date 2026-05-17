@@ -5,10 +5,10 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
-# (Optional) If you ever DO need to force an env var across the whole workflow, 
-# this is where you put it!
-# env:
-#   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+# FIX: Placing this here applies it globally to every step in the file,
+# forcing pnpm/action-setup to run on Node 24 and silencing the warning.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
   contents: read
@@ -22,7 +22,6 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v6
         
-      # FIX: Upgraded to v4 to resolve the Node 20 deprecation warning
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
