@@ -40,10 +40,15 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v5
         with:
-          path: .
+          # path: .
           node-version: 24
           package-manager: pnpm@latest
           build-cmd: pnpm run build
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+
+          
           
 
 
