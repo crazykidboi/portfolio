@@ -45,7 +45,7 @@ jobs:
           package-manager: pnpm@latest
           build-cmd: pnpm run build
         env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
 
           
