@@ -1,56 +1,52 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: [ main ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
+# (Optional) If you ever DO need to force an env var across the whole workflow, 
+# this is where you put it!
+# env:
+#   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: read
   pages: write
   id-token: write
 
 jobs:
-  
   build:
     runs-on: ubuntu-latest
     steps:
-      
-      - name: Install pnpm globally
-        run: npm install -g pnpm
       - name: Checkout your repository using git
         uses: actions/checkout@v6
+        
+      # FIX: Upgraded to v4 to resolve the Node 20 deprecation warning
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
           version: latest
+          
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
+          
       - name: Install dependencies
         run: pnpm install
+        
       - name: Approve Builds
         run: pnpm approve-builds
+        
       - name: Install, build, and upload your site
         uses: withastro/action@v5
         with:
-          # path: .
           node-version: 24
           package-manager: pnpm@latest
           build-cmd: pnpm run build
-        env:
-          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-
-
-          
-          
-
+          # Removed the locally-scoped env variable from here
 
   deploy:
     needs: build
@@ -60,8 +56,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Install pnpm globally
-        run: npm install -g pnpm
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
