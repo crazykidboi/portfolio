@@ -5,8 +5,6 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
-# FIX: Placing this here applies it globally to every step in the file,
-# forcing pnpm/action-setup to run on Node 24 and silencing the warning.
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -19,7 +17,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout your repository
         uses: actions/checkout@v6
         
       - name: Setup pnpm
@@ -35,17 +33,15 @@ jobs:
       - name: Install dependencies
         run: pnpm install
         
-      - name: Approve Builds
-        run: pnpm approve-builds
+      # FIX: We build it manually now
+      - name: Build site
+        run: pnpm run build
         
-      - name: Install, build, and upload your site
-        uses: withastro/action@v5
+      # FIX: We use the official GitHub tool to package the dist folder
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          node-version: 24
-          package-manager: pnpm@latest
-          build-cmd: pnpm run build
-          cache: false
-          # Removed the locally-scoped env variable from here
+          path: dist/
 
   deploy:
     needs: build
