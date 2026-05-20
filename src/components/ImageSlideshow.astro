@@ -1,0 +1,92 @@
+---
+// src/components/ImageSlideshow.astro
+import React from 'react';
+import { useState } from 'react';
+import { StaticImageData } from 'astro'; // Import StaticImageData
+import styles from './ImageSlideshow.module.css';  // Import CSS module
+
+interface Props {
+  directory: string;
+  width?: number; // Optional width for the slideshow
+  height?: number; // Optional height for the slideshow
+}
+
+const ImageSlideshow: React.FC<Props> = ({ directory, width = 800, height = 500 }) => {
+  // Assuming images are in `public/images/{directory}`
+  const imagePaths = [`/images/${directory}`];
+  // Dummy image data for testing if the directory is not found.  Replace with actual import logic
+  const images: StaticImageData[] = []; // Initialize as an empty array
+
+  // Load images dynamically
+  try {
+    // This is the tricky part with Astro.  You can't directly read the directory at build time.
+    // The best approach is often to pre-process the images during build (using a build script)
+    // and import them as static assets.
+    // This example assumes you have a script that generates a `images.ts` file in the directory
+    // with the image data.  See the "Important Considerations" section below for more details.
+
+    // For this example, we'll hardcode some images for demonstration purposes.
+    // Replace this with your actual import logic.
+    if (directory === "kittens") {
+      images.push(
+        {
+          src: '/images/kittens/kitten1.jpg',
+          alt: 'Cute kitten 1',
+        },
+        {
+          src: '/images/kittens/kitten2.jpg',
+          alt: 'Cute kitten 2',
+        },
+        {
+          src: '/images/kittens/kitten3.jpg',
+          alt: 'Cute kitten 3',
+        }
+      );
+    } else if (directory === "puppies") {
+      images.push(
+        {
+          src: '/images/puppies/puppy1.jpg',
+          alt: 'Cute puppy 1',
+        },
+        {
+          src: '/images/puppies/puppy2.jpg',
+          alt: 'Cute puppy 2',
+        },
+      );
+    } else {
+      console.warn(`Directory "${directory}" not found. Using dummy images.`);
+      images.push({ src: '/images/default.jpg', alt: 'Default Image' }); //Provide a default image.
+    }
+
+  } catch (error) {
+    console.error(`Error loading images from "${directory}":`, error);
+    images.push({ src: '/images/default.jpg', alt: 'Default Image' }); //Provide a default image.
+  }
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+  };
+
+
+  return (
+    <div className={styles.slideshowContainer} style={{ width: width, height: height }}>
+      <img
+        src={images[currentIndex].src}
+        alt={images[currentIndex].alt}
+        className={styles.image}
+      />
+      <div className={styles.controls}>
+        <button onClick={goToPrevious} className={styles.controlButton}>&lt;</button>
+        <button onClick={goToNext} className={styles.controlButton}>&gt;</button>
+      </div>
+    </div>
+  );
+};
+
+export default ImageSlideshow;

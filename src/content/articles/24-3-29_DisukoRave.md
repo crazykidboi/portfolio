@@ -1,5 +1,5 @@
 ---
-isDraft: true
+isDraft: false
 title: DisukoRave
 snippet: We have plenty of intelligence. The problem is making it usable
 slug: disukorave
@@ -18,7 +18,7 @@ cover: /workPhotos/on3ko/en3kko_photos_001.png
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
   <iframe 
-    src="https://www.youtube.com/embed/E9T-mZGViHc?loop=1&playlist=E9T-mZGViHc&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1" 
+    src="https://www.youtube.com/embed/LUYz7kNklqk?loop=1&playlist=LUYz7kNklqk&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1" 
     title="YouTube video player" 
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -26,6 +26,7 @@ cover: /workPhotos/on3ko/en3kko_photos_001.png
   ></iframe>
 </div>
 
+https://youtu.be/LUYz7kNklqk
 
 <a href="https://on3ko.lol">On3ko</a> was a challenging show, but so so much fun; I was tasked with drumming live as well as pre programming lights to sync with a click track. The basic premise of this show was to create a concert where the visuals are synced to the music; however doing this with no budget proved difficult. I was on drums, <a href="https://www.disuko.gay">Angelo</a> was on guitar in addition to Casper, and <a href="https://www.honeyteaaa.art">Liz</a> was on bass. The whole musical group was lovely to work with since each musician brought their own unique voice to the performance.
 
