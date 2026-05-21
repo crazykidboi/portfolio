@@ -1,5 +1,5 @@
 ---
-isDraft: true
+isDraft: false
 title: Billie Holiday
 snippet: n/a
 slug: billie_holiday
