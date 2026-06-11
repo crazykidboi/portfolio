@@ -48,7 +48,7 @@ const relatedArticles = allArticles.filter(
                     </h2>
 
                     <ul class="mt-2.5 pb-10">
-                        {relatedArticles.map((related) => (
+                        {relatedArticles.slice(0, 3).map((related) => ( // Limit to 3 articles 
                             <li class="group">
                                 <a href={`/work/${related.slug || related.id || related.data.slug}`}>
                                     <h3 class="text-xl text-zinc-600 group-hover:text-white underline underline-offset-2 decoration-transparent group-hover:decoration-zinc-500">
