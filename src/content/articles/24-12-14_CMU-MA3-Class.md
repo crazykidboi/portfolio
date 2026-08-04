@@ -27,7 +27,7 @@ The nice thing about going to a school in Pittsburgh is that at some Universitie
   ></iframe>
 </div>
 
-In this class we learn about the MA3 console and had challenges to test our knowledge; one of which was to build a cue list (based on the designs of other students) that could be played along with a song live. My favorite part was being one of the only students to also build the show using SMPTE timecode; I knew I wanted to use timecode in the future, so I wanted to use the opportunity of having a real MA3 console in front of me to build a timecoded show (I talk about this in the video below). The hardest part was probably having to rebuild lighting fixtures using <a href="https://gdtf-share.com">GDTF</a>, which is basically an online forum and workspace for lighting techs to get fixture profiles.
+In this class we learn about the MA3 console and had challenges to test our knowledge; one of which was to build a cue list (based on the designs of other students) that could be played along with a song live. My favorite part was being one of the only students to also build the show using SMPTE timecode; I knew I wanted to use timecode in the future, so I wanted to use the opportunity of having a real MA3 console in front of me to build a timecoded show (I talk about this in the video below). The hardest part was probably having to rebuild lighting fixtures using <a href="https://gdtf-share.com" target="_blank" class="text-zinc-300 hover:underline md:text-inherit">GDTF</a>, which is basically an online forum and workspace for lighting techs to get fixture profiles.
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
   <iframe 

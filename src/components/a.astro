@@ -1,0 +1,21 @@
+---
+import clsx from "clsx/lite";
+
+type Props = {
+    className?: string;
+    variant?: "primary" | "secondary";
+}
+
+const { variant = "primary", className } = Astro.props;
+---
+
+
+<a
+    class={clsx(
+        "text-zinc-100 font-serif font-bold text-balance",
+        variant === "primary" && "text-zinc-900 bg-zinc-100 hover:outline-2 outline-offset-2 outline-zinc-100",
+        variant === "secondary" && "text-zinc-100 hover:text-white bg-transparent hover:bg-zinc-100/20 hover:outline-2 outline-offset-2 outline-zinc-100/20",
+        className,
+    )}>
+    <slot />
+    </a>

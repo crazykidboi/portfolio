@@ -15,7 +15,7 @@ cover: /workPhotos/24-3-29 Disuko Rave/disukoRave_1.png
 
 # Disuko Rave
 
-This was one of the first projects I worked on with <a href="https://www.disuko.gay" target="_blank">Disuko</a>, the whole process was exciting and something I'd never tried to do before: busking on an Element 2 ETC lighting console. Truly an impossible task, but was a great challenge. But I was glad to work alongside Angelo, or Disuko, and <a href="https://www.obadiah.dev" target="_blank">Obi</a>, who was running visuals and was a great help for the whole production.
+This was one of the first projects I worked on with <a href="https://www.disuko.gay" target="_blank" class="text-zinc-300 hover:underline md:text-inherit">Disuko</a>, the whole process was exciting and something I'd never tried to do before: busking on an Element 2 ETC lighting console. Truly an impossible task, but was a great challenge. But I was glad to work alongside Angelo, or Disuko, and <a href="https://www.obadiah.dev" target="_blank" class="text-zinc-300 hover:underline md:text-inherit">Obi</a>, who was running visuals and was a great help for the whole production.
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
   <iframe 

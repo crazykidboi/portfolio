@@ -27,7 +27,7 @@ I've worked with this group before, but this felt like an even higher level prod
   ></iframe>
 </div>
 
-Part of this show also involved a lot of sound design, at this point I understood the <a href="https://www.allen-heath.com/hardware/dlive-series/c3500/resources/">Allen and Heath dLive C3500</a> fairly well, I made my own profile and layout the faders in a custom configuration. As someone who has not done sound mixing full time for a few years its nice to be able to have a chance to stretch that muscle.
+Part of this show also involved a lot of sound design, at this point I understood the <a href="https://www.allen-heath.com/hardware/dlive-series/c3500/resources/" target="_blank" class="text-zinc-300 hover:underline md:text-inherit">Allen and Heath dLive C3500</a> fairly well, I made my own profile and layout the faders in a custom configuration. As someone who has not done sound mixing full time for a few years its nice to be able to have a chance to stretch that muscle.
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
   <iframe 
