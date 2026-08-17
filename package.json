@@ -13,22 +13,22 @@
   "dependencies": {
     "@astrojs/react": "^4.4.2",
     "@paper-design/shaders-react": "^0.0.29",
-    "@tailwindcss/vite": "^4.3.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "astro": "^5.18.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "astro": "^5.18.2",
     "astro-loading-indicator": "^0.7.1",
     "build": "^0.1.4",
     "clsx": "^2.1.1",
-    "motion": "^12.39.0",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
+    "motion": "^12.43.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.19",
-    "autoprefixer": "^10.5.0",
-    "postcss": "^8.5.14",
-    "tailwindcss": "^4.3.0"
+    "@tailwindcss/typography": "^0.5.20",
+    "autoprefixer": "^10.5.4",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^4.3.3"
   }
 }
