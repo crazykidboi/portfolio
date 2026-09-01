@@ -15,7 +15,7 @@
     "@paper-design/shaders-react": "^0.0.29",
     "@tailwindcss/vite": "^4.3.3",
     "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4",
+    "@types/react-dom": "^19.2.5",
     "astro": "^5.18.2",
     "astro-loading-indicator": "^0.7.1",
     "build": "^0.1.4",
