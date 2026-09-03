@@ -1,0 +1,77 @@
+---
+import H1 from "../components/h1.astro";
+import Link from "../components/link.astro";
+import Navigation from "../components/navigation";
+import RootLayout from "../layouts/RootLayout.astro";
+import WarpBackground from "../components/warp-background";
+import AvailableForWork from "../components/available.astro";
+// import { getCollection } from "astro:content";
+// import AstronomyGallery from '../components/AstronomyGallery.astro';
+// import { setupGallery } from '../lib/gallery-animation.js';
+// import { onMount } from 'svelte';
+
+// Get all articles for the slideshow
+// const allArticles = await getCollection("articles");
+// const filteredArticles = allArticles.filter(article => !article.data.isDraft);
+// const sortedArticles = filteredArticles.sort((a, b) => {
+//     return new Date(b.data.pubDate) - new Date(a.data.pubDate);
+// });
+---
+
+<RootLayout>
+	<main class="overscroll-none">
+		<div class="group relatiZve w-full min-h-dvh flex items-center justify-center">
+			<div class="absolute w-full h-dvh -z-10">
+				<WarpBackground
+					color1= #111111
+					color2= #222222
+					color3= #B3402E
+					speed={0.4}
+					swirl={0.4}
+					swirlIterations={10}
+					shapeScale={0.3}
+					client:load
+				/>
+			</div>
+
+			<div class="p-4 md:p-10 absolute w-full h-dvh flex flex-col justify-between z-10">
+				<div>
+					<H1 size="large"> Liam Lyons IV<br /> Portfolio </H1>
+				</div>
+
+				<div>
+					<AvailableForWork className="py-4" />
+					<div class="mb-2 sm:mb-4 flex items-center justify-between">
+						<div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+							<Link href="/work">Collection</Link>
+							<Link href="/work?category=lighting%20design" variant="secondary">Lighting Design</Link>
+							<Link href="/work?category=touring" variant="secondary">Touring</Link>
+							<Link href="/work?category=videography" variant="secondary">Videography</Link>
+							
+							<!-- temperaory div below, please remove around july of 2026 -->
+							<div class="animate-pulse">
+								<Link href="/work?category=photography" variant="secondary">Photography</Link>
+							</div>
+							
+							
+						</div>
+
+						<Navigation client:load>
+							<Link href="/about" variant="secondary">About</Link>
+							<Link href="/contact" variant="secondary">Contact</Link>
+						</Navigation>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+		</div>
+			
+	</main>
+</RootLayout>
+

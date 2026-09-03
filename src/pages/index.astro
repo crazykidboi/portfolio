@@ -5,73 +5,119 @@ import Navigation from "../components/navigation";
 import RootLayout from "../layouts/RootLayout.astro";
 import WarpBackground from "../components/warp-background";
 import AvailableForWork from "../components/available.astro";
-// import { getCollection } from "astro:content";
-// import AstronomyGallery from '../components/AstronomyGallery.astro';
-// import { setupGallery } from '../lib/gallery-animation.js';
-// import { onMount } from 'svelte';
+import { getCollection } from "astro:content";
 
-// Get all articles for the slideshow
-// const allArticles = await getCollection("articles");
-// const filteredArticles = allArticles.filter(article => !article.data.isDraft);
-// const sortedArticles = filteredArticles.sort((a, b) => {
-//     return new Date(b.data.pubDate) - new Date(a.data.pubDate);
-// });
+// Fetch and sort articles by newest date
+const allArticles = await getCollection("articles");
+const filteredArticles = allArticles.filter(article => !article.data.isDraft);
+const sortedArticles = filteredArticles.sort((a, b) => {
+    return new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf();
+});
+
+// Grab the top 4 most recent articles
+const recentArticles = sortedArticles.slice(0, 4);
 ---
 
 <RootLayout>
-	<main class="overscroll-none">
-		<div class="group relatiZve w-full min-h-dvh flex items-center justify-center">
-			<div class="absolute w-full h-dvh -z-10">
-				<WarpBackground
-					color1= #111111
-					color2= #222222
-					color3= #B3402E
-					speed={0.4}
-					swirl={0.4}
-					swirlIterations={10}
-					shapeScale={0.3}
-					client:load
-				/>
-			</div>
+    <main class="parallax-container bg-black">
+        
+        <div class="parallax-bg absolute top-0 left-0 w-full h-[200vh]">
+            <WarpBackground
+                color1="#111111"
+                color2="#222222"
+                color3="#B3402E"
+                speed={0.4}
+                swirl={0.4}
+                swirlIterations={10}
+                shapeScale={0.3}
+                client:load
+            />
+        </div>
 
-			<div class="p-4 md:p-10 absolute w-full h-dvh flex flex-col justify-between z-10">
-				<div>
-					<H1 size="large"> Liam Lyons IV<br /> Portfolio </H1>
-				</div>
+        <div class="parallax-content relative z-10">
+            
+            <div class="relative w-full h-dvh flex flex-col justify-between p-4 md:p-10">
+                <div>
+                    <H1 size="large"> Liam Lyons IV<br /> Portfolio </H1>
+                </div>
 
-				<div>
-					<AvailableForWork className="py-4" />
-					<div class="mb-2 sm:mb-4 flex items-center justify-between">
-						<div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
-							<Link href="/work">Collection</Link>
-							<Link href="/work?category=lighting%20design" variant="secondary">Lighting Design</Link>
-							<Link href="/work?category=touring" variant="secondary">Touring</Link>
-							<Link href="/work?category=videography" variant="secondary">Videography</Link>
-							
-							<!-- temperaory div below, please remove around july of 2026 -->
-							<div class="animate-pulse">
-								<Link href="/work?category=photography" variant="secondary">Photography</Link>
-							</div>
-							
-							
-						</div>
+                <div class="pb-8">
+                    <AvailableForWork className="py-4" />
+                    <div class="mb-2 sm:mb-4 flex items-center justify-between">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+                            <Link href="/work">Collection</Link>
+                            <Link href="/work?category=lighting%20design" variant="secondary">Lighting Design</Link>
+                            <Link href="/work?category=touring" variant="secondary">Touring</Link>
+                            <Link href="/work?category=videography" variant="secondary">Videography</Link>
+                            <Link href="/work?category=photography" variant="secondary">Photography</Link>
+                            
+                        </div>
 
-						<Navigation client:load>
-							<Link href="/about" variant="secondary">About</Link>
-							<Link href="/contact" variant="secondary">Contact</Link>
-						</Navigation>
-					</div>
-				</div>
-			</div>
+                        <Navigation client:load>
+                            <Link href="/about" variant="secondary">About</Link>
+                            <Link href="/contact" variant="secondary">Contact</Link>
+                        </Navigation>
+                    </div>
+                </div>
 
+                <!-- Bouncing Scroll Indicator -->
+                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce text-zinc-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </div>
+            </div>
 
+            <!-- Dynamic Recent Work Section -->
+            <div class="w-full min-h-dvh p-4 md:p-10 pt-20">
+                
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                    {recentArticles.map((article) => (
+                        <a href={`/work/${article.id}`} class="group relative aspect-[3/4] rounded-s border border-zinc-900 overflow-hidden block bg-zinc-900">
+                            
+                            <!-- Cover Image -->
+                            <img 
+                                src={article.data.cover} 
+                                alt={article.data.title} 
+                                class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50"
+                            />
+                            
+                            <!-- Dark Gradient for Text Readability -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+                            
+                            <!-- Text Content -->
+                            <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
+                                <p class="text-zinc-400 text-sm md:text-base mb-2 uppercase tracking-wider italic">{article.data.category}</p>
+                                <h2 class="text-xl text-zinc-300 group-hover:text-white underline group-hover:underline-offset-2 decoration-transparent group-hover:decoration-zinc-500">
+                                	{article.data.title}
+                                </h2>
+                            </div>
+                            
+                        </a>
+                    ))}
+                </div>
+            </div>
 
-
-
-
-
-		</div>
-			
-	</main>
+        </div>
+    </main>
 </RootLayout>
 
+<style>
+    .parallax-container {
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        perspective: 10px; 
+    }
+
+    .parallax-bg {
+        transform: translateZ(-10px) scale(2);
+        transform-origin: center center;
+        pointer-events: none; 
+    }
+
+    .parallax-content {
+        transform: translateZ(0); 
+    }
+</style>
