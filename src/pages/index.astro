@@ -42,21 +42,14 @@ const recentArticles = sortedArticles.slice(0, 4);
                 </div>
 
                 <div class="pb-8">
-                    <AvailableForWork className="py-4" />
-                    <div class="mb-2 sm:mb-4 flex items-center justify-between">
+                    
+                    <div class="p-3 mb-2 sm:mb-4 flex items-center justify-center">
                         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
                             <Link href="/work">Collection</Link>
-                            <Link href="/work?category=lighting%20design" variant="secondary">Lighting Design</Link>
-                            <Link href="/work?category=touring" variant="secondary">Touring</Link>
-                            <Link href="/work?category=videography" variant="secondary">Videography</Link>
-                            <Link href="/work?category=photography" variant="secondary">Photography</Link>
                             
                         </div>
 
-                        <Navigation client:load>
-                            <Link href="/about" variant="secondary">About</Link>
-                            <Link href="/contact" variant="secondary">Contact</Link>
-                        </Navigation>
+
                     </div>
                 </div>
 
@@ -72,7 +65,7 @@ const recentArticles = sortedArticles.slice(0, 4);
             <div class="w-full min-h-dvh p-4 md:p-10 pt-20">
                 
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-10">
                     {recentArticles.map((article) => (
                         <a href={`/work/${article.id}`} class="group relative aspect-[3/4] rounded-s border border-zinc-900 overflow-hidden block bg-zinc-900">
                             
@@ -97,6 +90,25 @@ const recentArticles = sortedArticles.slice(0, 4);
                         </a>
                     ))}
                 </div>
+
+                <div class="pb-8">
+                    <AvailableForWork className="py-10 justify-center" />
+                    <div class="mb-2 sm:mb-4 flex items-center justify-between">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+                            <Link href="/work?category=lighting%20design" variant="secondary">Lighting Design</Link>
+                            <Link href="/work?category=touring" variant="secondary">Touring</Link>
+                            <Link href="/work?category=videography" variant="secondary">Videography</Link>
+                            <Link href="/work?category=photography" variant="secondary">Photography</Link>
+                            
+                        </div>
+
+                        <Navigation client:load>
+                            <Link href="/about" variant="secondary">About</Link>
+                            <Link href="/contact" variant="secondary">Contact</Link>
+                        </Navigation>
+                    </div>
+                </div>
+
             </div>
 
         </div>

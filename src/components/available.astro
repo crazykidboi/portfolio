@@ -2,10 +2,44 @@
 const { className } = Astro.props;
 ---
 
-<div class={`flex items-center gap-2 ${className}`}>
-    <span class="relative flex items-center justify-center size-3">
-        <span class="absolute inline-flex h-full w-full animate-ping duration-2000 rounded-full bg-zinc-100 opacity-75"></span>
-        <span class="relative inline-flex size-2 rounded-full bg-zinc-100"></span>
-      </span>
-      <a href="/contact" class="text-zinc-300 duration-2000">Available For Work</a>
-    </div>
+<svg style="display: none;">
+  <filter id="crt-twist">
+    <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="2" result="noise" />
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
+  </filter>
+</svg>
+
+<style>
+  /* Choose your two chromatic aberration colors here */
+  :root {
+    --color-1: #ff0000; /* Red */
+    --color-2: #527878; /* Cyan */
+  }
+
+  .chromatic-text {
+    text-shadow: 2px 0 0 var(--color-1), -2px 0 0 var(--color-2);
+  }
+  
+  .chromatic-dot {
+    box-shadow: 2px 0 0 var(--color-1), -2px 0 0 var(--color-2);
+  }
+</style>
+
+<!-- Filter applied to the entire wrapper -->
+<div class={`flex items-center gap-2 ${className}`} style="filter: url(#crt-twist);">
+    
+    <span class="relative flex items-center justify-center size-6">
+        <!-- Chromatic dot class added to both spans -->
+        <span class="absolute inline-flex h-full w-full animate-ping duration-2000 rounded-full bg-zinc-100 opacity-75 chromatic-dot"></span>
+        <span class="relative inline-flex size-4 rounded-full bg-zinc-100 chromatic-dot"></span>
+    </span>
+    
+    <!-- Chromatic text class added to the link -->
+    <a 
+      href="/contact" 
+      class="text-zinc-300 duration-2000 transition-all hover:opacity-80 chromatic-text"
+    >
+      Available For Work
+    </a>
+    
+</div>
