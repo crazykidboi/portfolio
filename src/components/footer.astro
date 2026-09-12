@@ -19,10 +19,21 @@ const pathname = Astro.url.pathname;
         
     </div>
     
-    <ExternalLink href="/" openNewTab={false}>Home</ExternalLink>
-    <ExternalLink href="/work" openNewTab={false}>Work</ExternalLink>
-    <ExternalLink href="/about" openNewTab={false}>About</ExternalLink>
-    <ExternalLink href="/contact" openNewTab={false}>Contact</ExternalLink>
+    <a href="/" class="w-fit px-4 py-1 text-sm bg-transparent rounded-full transition-all duration-300 ease-in-out text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800">
+            Home
+        </a>
+        
+        <a href="/work" class="w-fit px-4 py-1 text-sm bg-transparent rounded-full transition-all duration-300 ease-in-out text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800">
+            Work
+        </a>
+        
+        <a href="/about" class="w-fit px-4 py-1 text-sm bg-transparent rounded-full transition-all duration-300 ease-in-out text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800">
+            About
+        </a>
+        
+        <a href="/contact" class="w-fit px-4 py-1 text-sm bg-transparent rounded-full transition-all duration-300 ease-in-out text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800">
+            Contact
+        </a>
 </footer>
 
 <!-- place to get icons https://iconsvg.xyz -->
